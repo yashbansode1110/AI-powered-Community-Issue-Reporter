@@ -1,61 +1,227 @@
 🐞 Community Issue Reporter
-A lightweight web application built with React, Node.js, and Express that allows users to report and track issues — complete with authentication, file uploads, and map support.
+
+A lightweight full-stack web application that allows citizens to report, track, and manage community issues such as potholes, garbage, streetlight failures, etc.
+
+Users can upload images, mark locations on a map, and track issue status in real time.
+
+Built using React, Node.js, Express, and MongoDB with secure authentication and cloud-based image storage.
 
 🚀 Features
+1. User Authentication
 
-User Authentication (signup/login)
-Report Issues with optional image upload
-Issue Listing & Management
-Map Integration (using Leaflet)
-Secure routes with JWT
-Cloudinary support for image storage
-Modular structure (controllers, services, models, routes)
+Secure Signup and Login system
+
+JWT-based authentication
+
+Protected routes for authorized users
+
+2. Issue Reporting
+
+Users can:
+
+Report community problems
+
+Add description of the issue
+
+Upload images as proof
+
+Select location using map
+
+3. Image Upload
+
+Images uploaded using Multer
+
+Stored securely in Cloudinary
+
+4. Map Integration
+
+Uses Leaflet.js
+
+Allows users to mark issue location coordinates
+
+5. Issue Tracking
+
+Users can:
+
+View list of reported issues
+
+Track status of issues
+
+Manage their reported issues
+
+6. Modular Backend Architecture
+
+Backend is structured using:
+
+Controllers
+
+Services
+
+Models
+
+Routes
+
+Middleware
+
+This improves scalability and maintainability.
+
+🛠️ Tech Stack
+Frontend
+
+React
+
+Vite
+
+Axios
+
+Leaflet (Map Integration)
+
+Backend
+
+Node.js
+
+Express.js
+
+Database
+
+MongoDB
+
+Mongoose ODM
+
+Authentication
+
+JSON Web Token (JWT)
+
+File Upload
+
+Multer
+
+Cloudinary
 
 📁 Project Structure
 .
-├── src/
-│   ├── api/             # Axios client
-│   ├── components/      # Reusable UI components
-│   ├── config/          # DB, cloudinary, etc.
-│   ├── controllers/     # Express handlers
-│   ├── middleware/      # Auth, upload
-│   ├── models/          # Mongoose schemas
-│   ├── pages/           # React pages
-│   ├── routes/          # Server routes
-│   ├── services/        # Business logic
-│   └── utils/           # Helpers (eg. fixLeafletIcon)
-├── index.html
-├── package.json
-└── vite.config.js
+├── src
+│
+├── api
+│   └── axios client for API requests
+│
+├── components
+│   └── reusable UI components
+│
+├── config
+│   └── configuration files (database, cloudinary)
+│
+├── controllers
+│   └── request handlers for API routes
+│
+├── middleware
+│   └── authentication & upload middleware
+│
+├── models
+│   └── mongoose schemas
+│
+├── pages
+│   └── React application pages
+│
+├── routes
+│   └── express routes
+│
+├── services
+│   └── business logic layer
+│
+└── utils
+    └── helper functions
 
-🛠️ Tech Stack
-Frontend: React, Vite, Axios
-Backend: Node.js, Express
-Database: MongoDB (via Mongoose)
-Authentication: JSON Web Tokens
-Uploads: Multer + Cloudinary
-Maps: Leaflet
-💾 Setup & Installation
-Clone the repo:
+Root Files
+-----------
+index.html
+package.json
+vite.config.js
+⚙️ Setup & Installation
+1️⃣ Clone Repository
+git clone https://github.com/yourusername/community-issue-reporter.git
+cd community-issue-reporter
+2️⃣ Install Dependencies
+npm install
+3️⃣ Configure Environment Variables
 
-Install dependencies:
+Create a .env file in the root directory.
 
-Configure environment variables (.env):
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
 
-MONGO_URI – your MongoDB connection string
-JWT_SECRET – secret key for JWT
-CLOUDINARY_* – your Cloudinary credentials
-Run the development server:
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+4️⃣ Run Development Server
+npm run dev
 
+The application will run locally on:
+
+http://localhost:5173
 📦 Available Scripts
+Script	Description
+npm run dev	Start development server
+npm run build	Create production build
+npm run serve	Serve production build locally
+🔐 Security Features
 
-npm run dev – start development server
-npm run build – produce production build
-npm run serve – serve the build locally (requires serve)
+Password hashing using bcrypt
+
+JWT token authentication
+
+Protected API routes
+
+Secure image upload
+
+🌍 Real-World Use Case
+
+This application can be used by:
+
+Citizens to report civic issues
+
+Municipal authorities to monitor problems
+
+Local communities to track issue resolution
+
+Examples:
+
+Potholes
+
+Garbage dumping
+
+Broken street lights
+
+Water leakage
+
+Road damage
 
 🤝 Contributing
 
-Fork the repo
-Create a new branch (git checkout -b feature/my-feature)
+Fork the repository
+
+Create a new branch
+
+git checkout -b feature/my-feature
+
 Commit your changes
-Push to your branch and open a PR
+
+git commit -m "Added new feature"
+
+Push to the branch
+
+git push origin feature/my-feature
+
+Open a Pull Request
+
+📌 Future Improvements
+
+Issue status updates by authorities
+
+Notification system
+
+Admin dashboard
+
+AI-based issue classification
+
+Mobile responsive improvements
