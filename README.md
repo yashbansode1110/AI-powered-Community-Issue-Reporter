@@ -1,227 +1,215 @@
-🐞 Community Issue Reporter
+# 🐞 Community Issue Reporter
 
-A lightweight full-stack web application that allows citizens to report, track, and manage community issues such as potholes, garbage, streetlight failures, etc.
+A lightweight full-stack web application that allows citizens to **report and track community issues** such as potholes, garbage dumping, streetlight failures, etc.
 
-Users can upload images, mark locations on a map, and track issue status in real time.
+Users can upload images, mark locations on a map, and track issue status.  
+Built using **React, Node.js, Express, and MongoDB** with secure authentication and cloud-based image storage.
 
-Built using React, Node.js, Express, and MongoDB with secure authentication and cloud-based image storage.
+---
 
-🚀 Features
-1. User Authentication
+# 🚀 Features
 
-Secure Signup and Login system
+### 1. User Authentication
+- Secure **Signup and Login**
+- **JWT-based authentication**
+- Protected routes for authorized users
 
-JWT-based authentication
-
-Protected routes for authorized users
-
-2. Issue Reporting
-
+### 2. Issue Reporting
 Users can:
+- Report community problems
+- Add description of the issue
+- Upload images as proof
+- Select location using map
 
-Report community problems
+### 3. Image Upload
+- Images uploaded using **Multer**
+- Stored securely in **Cloudinary**
 
-Add description of the issue
+### 4. Map Integration
+- Uses **Leaflet.js**
+- Allows users to mark issue **location coordinates**
 
-Upload images as proof
-
-Select location using map
-
-3. Image Upload
-
-Images uploaded using Multer
-
-Stored securely in Cloudinary
-
-4. Map Integration
-
-Uses Leaflet.js
-
-Allows users to mark issue location coordinates
-
-5. Issue Tracking
-
+### 5. Issue Tracking
 Users can:
+- View list of reported issues
+- Track issue status
+- Manage their reported issues
 
-View list of reported issues
-
-Track status of issues
-
-Manage their reported issues
-
-6. Modular Backend Architecture
-
+### 6. Modular Backend Architecture
 Backend is structured using:
+- Controllers
+- Services
+- Models
+- Routes
+- Middleware
 
-Controllers
+This improves **scalability and maintainability**.
 
-Services
+---
 
-Models
+# 🛠️ Tech Stack
 
-Routes
+### Frontend
+- React
+- Vite
+- Axios
+- Leaflet
 
-Middleware
+### Backend
+- Node.js
+- Express.js
 
-This improves scalability and maintainability.
+### Database
+- MongoDB
+- Mongoose
 
-🛠️ Tech Stack
-Frontend
+### Authentication
+- JSON Web Tokens (JWT)
 
-React
+### File Upload
+- Multer
+- Cloudinary
 
-Vite
+---
 
-Axios
+# 📁 Project Structure
 
-Leaflet (Map Integration)
-
-Backend
-
-Node.js
-
-Express.js
-
-Database
-
-MongoDB
-
-Mongoose ODM
-
-Authentication
-
-JSON Web Token (JWT)
-
-File Upload
-
-Multer
-
-Cloudinary
-
-📁 Project Structure
+```
 .
-├── src
+├── src/
+│   ├── api/           # Axios client
+│   ├── components/    # Reusable UI components
+│   ├── config/        # Database & Cloudinary configuration
+│   ├── controllers/   # Express request handlers
+│   ├── middleware/    # Authentication & upload middleware
+│   ├── models/        # Mongoose schemas
+│   ├── pages/         # React pages
+│   ├── routes/        # Express routes
+│   ├── services/      # Business logic
+│   └── utils/         # Helper functions
 │
-├── api
-│   └── axios client for API requests
-│
-├── components
-│   └── reusable UI components
-│
-├── config
-│   └── configuration files (database, cloudinary)
-│
-├── controllers
-│   └── request handlers for API routes
-│
-├── middleware
-│   └── authentication & upload middleware
-│
-├── models
-│   └── mongoose schemas
-│
-├── pages
-│   └── React application pages
-│
-├── routes
-│   └── express routes
-│
-├── services
-│   └── business logic layer
-│
-└── utils
-    └── helper functions
+├── index.html
+├── package.json
+└── vite.config.js
+```
 
-Root Files
------------
-index.html
-package.json
-vite.config.js
-⚙️ Setup & Installation
-1️⃣ Clone Repository
+---
+
+# ⚙️ Setup & Installation
+
+### 1. Clone the Repository
+
+```bash
 git clone https://github.com/yourusername/community-issue-reporter.git
 cd community-issue-reporter
-2️⃣ Install Dependencies
+```
+
+---
+
+### 2. Install Dependencies
+
+```bash
 npm install
-3️⃣ Configure Environment Variables
+```
 
-Create a .env file in the root directory.
+---
 
+### 3. Configure Environment Variables
+
+Create a `.env` file in the root directory.
+
+```
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 
 CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
-4️⃣ Run Development Server
+```
+
+---
+
+### 4. Run the Development Server
+
+```bash
 npm run dev
+```
 
-The application will run locally on:
+The application will run on:
 
+```
 http://localhost:5173
-📦 Available Scripts
-Script	Description
-npm run dev	Start development server
-npm run build	Create production build
-npm run serve	Serve production build locally
-🔐 Security Features
+```
 
-Password hashing using bcrypt
+---
 
-JWT token authentication
+# 📦 Available Scripts
 
-Protected API routes
+| Script | Description |
+|------|-------------|
+| npm start | To run Backend |
+| npm run dev:client | To run Frontend |
 
-Secure image upload
+---
 
-🌍 Real-World Use Case
+# 🔐 Security Features
+
+- Password hashing using **bcrypt**
+- **JWT authentication**
+- Protected API routes
+- Secure image uploads
+
+---
+
+# 🌍 Real-World Use Cases
 
 This application can be used by:
 
-Citizens to report civic issues
+- Citizens to report civic problems
+- Municipal authorities to monitor issues
+- Local communities to track issue resolution
 
-Municipal authorities to monitor problems
+Examples of issues:
+- Potholes
+- Garbage dumping
+- Broken street lights
+- Water leakage
+- Road damage
 
-Local communities to track issue resolution
+---
 
-Examples:
+# 🤝 Contributing
 
-Potholes
+1. Fork the repository
 
-Garbage dumping
+2. Create a new branch
 
-Broken street lights
-
-Water leakage
-
-Road damage
-
-🤝 Contributing
-
-Fork the repository
-
-Create a new branch
-
+```bash
 git checkout -b feature/my-feature
+```
 
-Commit your changes
+3. Commit your changes
 
+```bash
 git commit -m "Added new feature"
+```
 
-Push to the branch
+4. Push to the branch
 
+```bash
 git push origin feature/my-feature
+```
 
-Open a Pull Request
+5. Open a Pull Request
 
-📌 Future Improvements
+---
 
-Issue status updates by authorities
+# 📌 Future Improvements
 
-Notification system
+- Admin dashboard
+- Issue status updates by authorities
+- Notification system
+- AI-based issue classification
+- Mobile responsive improvements
 
-Admin dashboard
-
-AI-based issue classification
-
-Mobile responsive improvements
+---
